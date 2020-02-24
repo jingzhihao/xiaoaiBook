@@ -1,0 +1,27 @@
+.font {
+    margin-top: 20rpx;
+}
+
+.font-name {
+    padding: 18rpx;
+    color: rgb(204, 204, 204);
+}
+
+.name {
+    border: 1rpx solid rgb(247, 247, 247);
+    float: left;
+    background: white;
+    width: 33%;
+    color: rgb(51, 51, 51);
+    line-height: 54rpx;
+    text-align: center;
+}
+
+.name-i {
+    font-weight: 700;
+}
+
+.name-t {
+    font-size: 26rpx;
+    color: rgb(153, 153, 153);
+}

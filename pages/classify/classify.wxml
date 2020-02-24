@@ -1,0 +1,32 @@
+<view class="nav_title">
+    <view class="nav_tab flex">
+        <view wx:for="{{typeList}}" wx:key="index" class="hid {{selected==index?'hidden':'show'}} t-a" data-id='{{item.id}}' data-index='{{index}}' bindtap="selected">
+            {{item.name}}
+        </view>
+    </view>
+</view>
+<view class="nav_title">
+    <view class="nav_tab flex">
+        <view wx:for="{{arr}}" wx:key="index" class="hid {{select==index?'hidden':'show'}} t-a" data-item='{{item}}' data-index='{{index}}' bindtap="select">
+            {{item}}
+        </view>
+    </view>
+</view>
+<!-- tab框显示内容 -->
+<view class="tab">
+    <view wx:if="{{selected == 0}}">
+        <classify book="{{book}}"></classify>
+    </view>
+    <view wx:if="{{selected == 1}}">
+        <classify book="{{book}}"></classify>
+    </view>
+    <view wx:if="{{selected == 2}}">
+        <classify book="{{book}}"></classify>
+    </view>
+    <view wx:if="{{selected == 3}}">
+        <classify book="{{book}}"></classify>
+    </view>
+    <view wx:if="{{selected == 4}}">
+        <classify book="{{book}}"></classify>
+    </view>
+</view>

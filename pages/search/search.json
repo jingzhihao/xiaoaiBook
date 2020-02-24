@@ -1,0 +1,7 @@
+{
+    "usingComponents": {},
+    "navigationBarTitleText": "搜索",
+    "enablePullDownRefresh": true,
+    "onPullDownRefresh": true,
+    "onReachBottom": true
+}

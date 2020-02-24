@@ -1,0 +1,17 @@
+<view class="tab">
+    <view wx:if="{{book.length === 0}}"></view>
+    <view wx:else>
+        <view wx:for="{{book}}" wx:key="index">
+            <view class="tab-show" data-id="{{item._id}}" bind:tap="details">
+                <view>
+                    <image class="img" src="https://statics.zhuishushenqi.com{{item.cover}}" />
+                </view>
+                <view class="tab-but">
+                    <view class="title">{{item.title}}</view>
+                    <view class="author">{{item.author}}</view>
+                    <view class="shortIntro">{{item.shortIntro}}</view>
+                </view>
+            </view>
+        </view>
+    </view>
+</view>

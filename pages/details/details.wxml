@@ -1,0 +1,97 @@
+<view wx:if="{{img === 0}}">
+    <view class="t-a font">
+        <view class="font-top"></view>
+        <view class="">
+            <image class="img" src="https://statics.zhuishushenqi.com{{arr.cover}}" bind:tap="image"/>
+        </view>
+        <view class="title">{{arr.title}}</view>
+        <view class="author">{{arr.author}}</view>
+    </view>
+    <view class="bottom">
+        <view class="bottom-top flex j-between m-t t-a">
+            <view class="bottom-name" data-item="{{arr}}" bind:tap="read">开始阅读</view>
+            <view class="bottom-name bottom-name-t" data-item="{{arr.cover}}" data-title="{{arr.title}}" data-id="{{arr._id}}" bind:tap="joinbook">
+                {{number>1?'加入书架':'已加入书架'}}
+            </view>
+        </view>
+        <view class="flex j-center">
+            <view wx:for="{{list}}" wx:key="index">
+                <image wx:if="{{index <score}}" class="notrate" src="../../assets/img/rate.png" />
+                <image wx:else class="notrate" src="../../assets/img/notrate.png" />
+            </view>
+        </view>
+        <view class="flex j-center bottom-flex">
+            <view class="bottom-t">更新至</view>
+            <view class="lastChapter">{{arr.lastChapter}}</view>
+        </view>
+        <view class="bottom-font">
+            <view class="bottom-font-t a-center  flex j-around">
+                <view wx:for="{{new}}" wx:key="index" class="item">
+                    <view wx:if="{{index===0}}">
+                        <view class="text" bind:tap="clickItem" data-index="{{index}}">
+                            {{item.name}}
+                        </view>
+                        <view class="line" wx:if="{{activeIndex === index}}"></view>
+                    </view>
+                    <view wx:else>
+                        <view class="text" bind:tap="clickItem" data-index="{{index}}">
+                            {{item.name}}({{docs.length}})
+                        </view>
+                        <view class="line" wx:if="{{activeIndex === index}}"></view>
+                    </view>
+                </view>
+            </view>
+            <scroll-view style="height: 400rpx;" scroll-y="true" class="scroll">
+                <view wx:if="{{activeIndex === 0}}">
+                    <view class="longIntro">简介：{{arr.longIntro}}</view>
+                    <view class="chaptersCount flex longIntro a-center j-center">
+                        <view>
+                            <image class="image" src="../../assets/img/mulun.png" />
+                        </view>
+                        <view>总目录({{arr.chaptersCount}}章)</view>
+                    </view>
+                    <view class="longIntro flex j-between">
+                        <view>看过这本书的人还在看</view>
+                        <view class="huan" bind:tap="huan">
+                            <image class="image" src="../../assets/img/huan.png" />
+                            换一换
+                        </view>
+                    </view>
+                    <view class="xin flex j-between">
+                        <view class="xin-img" wx:for="{{books}}" wx:key="index" data-id="{{item._id}}" bind:tap="getTo" >
+                            <view class="xin-image">
+                                <image class="imgsaaa" src="https://statics.zhuishushenqi.com{{item.cover}}" />
+                            </view>
+                            <view class="xin-text t-a">{{item.title}}</view>
+                        </view>
+                    </view>
+                </view>
+                <view wx:else>
+                    <view class="m-t-1 flex" wx:for="{{docs}}" wx:key="index">
+                        <view class="people-img">
+                            <image class="people-image" src="https://statics.zhuishushenqi.com{{item.author.avatar}}" />
+                        </view>
+                        <view class="people-text">
+                            <view class="peopless">{{item.author.nickname}}</view>
+                            <view class="people-comtent">{{item.content}}</view>
+                        </view>
+                    </view>
+                </view>
+            </scroll-view>
+        </view>
+    </view>
+</view>
+<view wx:else>
+    <view class="toopter">
+        <view class="footer">
+            <image class="footer-img" src="https://statics.zhuishushenqi.com{{arr.cover}}" data-img="https://statics.zhuishushenqi.com{{arr.cover}}" />
+        </view>
+        <view class="footet t-a">
+            <view class="foot m-t" data-img="https://statics.zhuishushenqi.com{{arr.cover}}" bind:tap="img">
+                保存图片
+            </view>
+            <view style="background-color: rgb(255, 255, 255); height: 8rpx;"></view>
+            <view class="foot m-t" bind:tap="image">取消</view>
+        </view>
+    </view>
+</view>

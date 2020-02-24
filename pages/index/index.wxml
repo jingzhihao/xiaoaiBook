@@ -1,0 +1,24 @@
+<view class="flex">
+    <view wx:for="{{list}}" wx:key="index" class="item m-l-1 t-a">
+        <view data-index="{{index}}" bind:tap="clickItem">{{item}}</view>
+        <view class="line" wx:if="{{activeIndex === index}}"></view>
+    </view>
+</view>
+<view>
+    <view wx:if="{{activeIndex === 0}}">
+        <view class="font-a">
+            <index arr="{{male}}" title="男生" gender="male"></index>
+        </view>
+        <view class="font-b">
+            <index arr="{{female}}" title="女生" gender="female"></index>
+        </view>
+        <view class="font-c">
+            <index arr="{{press}}" title="出版" gender="press"></index>
+        </view>
+    </view>
+    <view wx:if="{{activeIndex === 1}}">
+        <seniority arr="{{male1}}" title="男生"></seniority>
+        <seniority arr="{{female1}}" title="女生"></seniority>
+        <seniority arr="{{press1}}" title="出版"></seniority>
+    </view>
+</view>

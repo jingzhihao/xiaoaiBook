@@ -1,0 +1,23 @@
+.container {
+    width: 90%;
+    margin: 20rpx auto;
+}
+
+.questions-statements {
+    font-size: 40rpx;
+    font-weight: 700;
+}
+
+.q-box {
+    border-bottom: 1rpx solid rgb(172, 172, 172);
+    line-height: 80rpx;
+    color: rgb(127, 127, 134);
+    font-weight: 700;
+}
+
+.line {
+    color: rgb(175, 175, 175);
+    font-size: 28rpx;
+    border-bottom: 1rpx solid rgb(172, 172, 172);
+    line-height: 60rpx;
+}

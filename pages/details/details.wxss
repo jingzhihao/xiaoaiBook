@@ -1,0 +1,173 @@
+.font {
+    height: 520rpx;
+}
+
+.font-top {
+    height: 100rpx;
+    background-color: rgb(255, 68, 102);
+}
+
+.img {
+    margin-top: -100rpx;
+    width: 248rpx;
+    height: 342rpx;
+}
+
+.title {
+    font-weight: 700;
+}
+
+.author {
+    padding: 22rpx 0;
+    color: rgb(166, 173, 181);
+}
+
+.bottom {
+    background-color: rgb(247, 247, 247);
+}
+
+.bottom-top {
+    width: 75%;
+    position: relative;
+    top: -36rpx;
+}
+
+.bottom-name {
+    font-size: 30rpx;
+    color: rgb(255, 255, 255);
+    padding: 20rpx 40rpx;
+    border-radius: 40rpx;
+    background-color: rgb(255, 68, 102);
+    width: 27%
+}
+
+.bottom-name-t {
+    border: 1rpx solid rgb(246, 246, 246);
+    color: rgb(43, 42, 42);
+    background-color: rgb(255, 255, 255);
+}
+
+.notrate {
+    width: 40rpx;
+    height: 42rpx;
+}
+
+.bottom-flex {
+    font-size: 30rpx;
+}
+
+.bottom-t {
+    padding: 0 20rpx;
+}
+
+.lastChapter {
+    color: rgb(150, 231, 218);
+}
+
+.bottom-font {
+    margin: 40rpx auto;
+    width: 90%;
+    background-color: rgb(255, 255, 255);
+    color: rgb(109, 109, 109);
+}
+
+.bottom-font-t {
+    height: 80rpx;
+    border-bottom: 1rpx solid rgb(246, 246, 246);
+}
+
+.longIntro {
+    width: 90%;
+    margin: 20rpx auto;
+    font-size: 30rpx;
+}
+
+.image {
+    width: 40rpx;
+    height: 40rpx;
+    vertical-align: middle;
+}
+
+.chaptersCount {
+    padding: 10rpx 0;
+    background-color: rgb(247, 247, 247);
+}
+
+.huan {
+    color: rgb(237, 170, 105);
+}
+
+.text {
+    position: relative;
+}
+
+.line {
+    position: relative;
+    width: 100%;
+    height: 4rpx;
+    background-color: red;
+    bottom: -10rpx;
+}
+
+.people-img {
+    margin: 0 20rpx;
+}
+
+.people-image {
+    width: 100rpx;
+    height: 100rpx;
+    border-radius: 50%;
+}
+
+.people-text {
+    line-height: 50rpx;
+}
+
+.people-comtent {
+    font-size: 26rpx;
+}
+
+.xin {
+    width: 90%;
+    margin: 20rpx auto;
+    flex-wrap: wrap;
+}
+
+.xin-text {
+    width: 170rpx;
+    line-height: 40rpx;
+    font-size: 26rpx;
+}
+
+.imgsaaa {
+    width: 184rpx;
+    height: 248rpx;
+}
+
+.footer {
+    width: 80%;
+    margin: 80rpx auto;
+}
+
+.footer-img {
+    width: 300px;
+    height: 400px;
+}
+
+.footet {
+    width: 100%;
+    height: 150rpx;
+    position: fixed;
+    left: 0px;
+    bottom: 0px;
+}
+
+.foot {
+    width: 80%;
+    color: rgb(255, 255, 255);
+    background-color: #605F5E;
+    border-radius: 20rpx;
+    line-height: 60rpx;
+}
+
+.toopter {}

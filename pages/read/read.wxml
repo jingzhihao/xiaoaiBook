@@ -1,0 +1,45 @@
+<import src="../../wxParse/wxParse.wxml" />
+
+<view wx:if="{{it !== 0}}">
+    <view class="flex j-between catalogue">
+        <view class="font-t">目录</view>
+        <view class="font-s" bind:tap="catalogue">收起</view>
+    </view>
+    
+    <view class="catalogue-title" wx:for="{{books}}" wx:key="index" data-index="{{index}}" bind:tap="link">
+        {{item.title}}
+    </view>
+    <view class="catalogue-title">
+        到底了！！！
+    </view>
+</view >
+
+    <view wx:else style="background-color: {{fontcolour}}" bind:tap="displaytest">
+        <view class="font">
+            <view class="chapter-box">
+                <view class="chapter-title">{{title}}</view>
+                <scroll-view class="chapter-scroll" style="height: 440px;" scroll-top="{{scrollTop}}" scroll-y="true" class="scroll">
+                    <view  class="chapter-content" style="font-size: {{fontsize}}rpx;">
+                        <template is="wxParse" data="{{wxParseData:article.nodes}}" />
+                    </view>
+                </scroll-view>
+                <view class="button-box flex j-center j-around">
+                    <view style="font-size: 30rpx;" catchtap="getPre">上一章</view>
+                    <view style="background-color: rgb(255, 255, 255);width: 4rpx"></view>
+                    <view style="font-size: 30rpx;" catchtap="getNext">下一章</view>
+                </view>
+            </view>
+        </view>
+    </view>
+    <view class="top " wx:if="{{activeName !== 0}}">
+        <view class="top-p flex a-center">
+            <view>换肤</view>
+            <view class="colour" wx:for="{{colour}}" wx:key="index" style="background-color: {{item.name}};" data-name="{{item.name}}" bind:tap="colour"></view>
+        </view>
+    </view>
+    <view wx:if="{{activeIndex !== 0}}" class="footer flex j-around j-center a-center">
+        <view bind:tap="catalogue">目录</view>
+        <view data-size="{{fontsize}}" bind:tap="fontSize">Aa-</view>
+        <view data-size="{{fontsize}}" bind:tap="fontSiza">Aa+</view>
+        <view bind:tap="displayName">背景</view>
+    </view>

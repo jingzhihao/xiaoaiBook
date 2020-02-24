@@ -1,0 +1,7 @@
+{
+    "usingComponents": {
+        "index": "../../components/index/index",
+        "seniority": "../../components/seniority/seniority"
+    },
+    "navigationBarTitleText": "小爱书架"
+}

@@ -1,0 +1,42 @@
+<view class="flex font j-center a-center">
+    <view class="lin">
+        <image wx:if="{{inputValue === ''}}" class="image" src="../../assets/img/se.png" />
+    </view>
+    <view>
+        <input class="input" type="text" bindconfirm="getInput" value="{{inputValue}}" placeholder="输入书名或作者名" />
+    </view>
+    <view class="lin" bind:tap="image">
+        <image wx:if="{{inputValue !== ''}}" class="image" src="../../assets/img/chacha.png" />
+    </view>
+</view>
+<view wx:if="{{inputValue === ''}}">
+    <view class="left flex j-between j-center a-center">
+        <view>大家都在搜</view>
+        <view class="name" bind:tap="huan">
+            <image class="ima" src="../../assets/img/refresh-red.png" />
+            换一换
+        </view>
+    </view>
+    <view class="foot flex m-t">
+        <view class="font-on" wx:for="{{newHotWords}}" wx:key="index"  data-name="{{item.book}}" bind:tap="getTo" style="background-color: #f55{{index}}">
+            {{item.word}}
+        </view>
+    </view>
+    <view class="left flex j-between j-center a-center">
+        <view>搜索历史</view>
+        <view class="name" bind:tap="clickTo">
+            <image class="ima" src="../../assets/img/delete.png" />
+            清空
+        </view>
+    </view>
+    <view class="foot flex m-t">
+        <view class="font-on">
+            <view wx:for="{{history}}" wx:key="index" data-value="{{item}}" bind:tap="clickItem">
+                <view class="flex1">{{item}}</view>
+            </view>
+        </view>
+    </view>
+</view>
+<view wx:else>
+    <books book="{{book}}"></books>
+</view>

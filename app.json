@@ -1,0 +1,49 @@
+{
+    "pages": [
+      
+        "pages/bookrack/bookrack",
+        "pages/search/search",
+        "pages/details/details",
+        "pages/index/index",
+        "pages/hotbot/hotbot",
+        "pages/classify/classify",
+        "pages/read/read",
+        "pages/help/help" 
+    ],
+    "window": {
+        "backgroundTextStyle": "light",
+        "navigationBarBackgroundColor": "#f46",
+        "navigationBarTitleText": "小爱书城",
+        "navigationBarTextStyle": "black"
+    },
+    "tabBar": {
+        "color": "#ccc",
+        "selectedColor": "#f46",
+        "backgroundColor": "#fff",
+        "borderStyle": "black",
+        "list": [{
+                "pagePath": "pages/bookrack/bookrack",
+                "text": "书架",
+                "iconPath": "assets/img/shu.png",
+                "selectedIconPath": "assets/img/shujia.png"
+            },
+            {
+                "pagePath": "pages/index/index",
+                "text": "书城",
+                "iconPath": "assets/img/sh.png",
+                "selectedIconPath": "assets/img/shou.png"
+            },
+            {
+                "pagePath": "pages/search/search",
+                "text": "搜索",
+                "iconPath": "assets/img/se.png",
+                "selectedIconPath": "assets/img/seach.png"
+            }
+        ]
+    },
+    "style": "v2",
+    "usingComponents": {
+        "books": "/components/books/books"
+    },
+    "sitemapLocation": "sitemap.json"
+}

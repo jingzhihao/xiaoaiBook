@@ -1,0 +1,35 @@
+/*tab框切换*/
+
+.nav_title {
+    border-bottom: 1rpx solid rgb(237, 237, 237)
+}
+
+.nav_tab {
+    flex-direction: row;
+}
+
+.hid {
+    line-height: 80rpx;
+    padding: 0 10rpx;
+    color: rgb(94, 94, 94);
+    font-size: 28rpx;
+    opacity: 0.5;
+}
+
+.show {
+    color: rgb(94, 94, 94);
+}
+
+.hidden {
+    color: rgb(203, 28, 54);
+}
+
+
+/** 内容样式*/
+
+.tab {
+    margin: 20rpx auto;
+    width: 96%;
+    font-size: 26rpx;
+    color: rgb(172, 172, 172);
+}

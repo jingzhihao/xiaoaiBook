@@ -1,0 +1,11 @@
+<view class="font">
+    <view class="man m-t-1">{{title}}</view>
+    <view class="ranking">
+        <view class="ranking-comtent" wx:for="{{arr}}" wx:key="index" bind:tap="clickRank" data-item="{{item}}">
+            <view class="ranking-img">
+                <image class="ranging-images" src="https://statics.zhuishushenqi.com{{item.cover}}" />
+            </view>
+            <view class="ranking-text">{{item.title}}</view>
+        </view>
+    </view>
+</view>

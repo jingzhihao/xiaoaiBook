@@ -1,0 +1,7 @@
+<view class="font">
+    <view class="font-name">{{title}}</view>
+    <view class="name" wx:for="{{arr}}" wx:key="index">
+        <view class="name-i" data-name="{{item.name}}" data-gender="{{gender}}" bind:tap="classify">{{item.name}}</view>
+        <view class="name-t">{{item.bookCount}}本</view>
+    </view>
+</view>

@@ -1,0 +1,20 @@
+<view wx:if="{{book.length === 0}}">没有数据</view>
+<view wx:else>
+    <view wx:for="{{book}}" wx:key="index">
+        <view class="flex tab-show" data-id="{{item._id}}" bind:tap="details">
+            <view>
+                <image class="img" src="{{item.cover}}" />
+            </view>
+            <view class="tab-but">
+                <view class="title">{{item.title}}</view>
+                <view class="author">{{item.author}}</view>
+                <view class="shortIntro">{{item.shortIntro}}</view>
+                <view class="flex tags a-center">
+                    <view wx:for="{{item.tags}}" wx:for-item="it" wx:for-index="in" wx:key="in">
+                        <view class="tags-it tags-it{{in}}">{{it}}</view>
+                    </view>
+                </view>
+            </view>
+        </view>
+    </view>
+</view>

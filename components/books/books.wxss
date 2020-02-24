@@ -1,0 +1,42 @@
+.tab {
+    margin: 20rpx auto;
+    width: 90%;
+    font-size: 26rpx;
+    color: rgb(172, 172, 172);
+}
+
+.tab-show {
+    padding: 20rpx 10rpx;
+    border-bottom: 1rpx solid rgb(172, 172, 172);
+    display: flex;
+}
+
+.tab-but {
+    padding: 0 20rpx;
+    color: rgb(175, 175, 175);
+}
+
+.title {
+    font-size: 28rpx;
+    font-weight: 700;
+    color: #333333;
+    height: 52rpx;
+}
+
+.author {
+    height: 54rpx;
+}
+
+.shortIntro {
+    word-break: break-all;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 3;
+    overflow: hidden;
+}
+
+.img {
+    width: 190rpx;
+    height: 256rpx;
+}

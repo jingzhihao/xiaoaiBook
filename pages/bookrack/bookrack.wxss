@@ -1,0 +1,87 @@
+.image {
+    width: 40rpx;
+    height: 40rpx;
+}
+
+.section_gap {
+    padding: 0 36rpx;
+    width: 80%;
+    line-height: 40rpx;
+}
+
+.section_name {
+    color: rgb(102, 102, 102);
+    padding: 0 20rpx;
+    border: 4rpx solid rgb(175, 175, 175);
+    border-radius: 20rpx;
+}
+
+.font {
+    color: rgb(51, 51, 51);
+    line-height: 200rpx;
+}
+
+.fonter {
+    width: 90%;
+    flex-wrap: wrap;
+}
+
+.xin-img {
+    padding: 10rpx 10rpx;
+}
+
+.xin-text {
+    width: 170rpx;
+    line-height: 40rpx;
+    font-size: 26rpx;
+}
+
+.t-a {
+    height: 80rpx;
+}
+
+.imgsaaa {
+    width: 200rpx;
+    height: 260rpx;
+}
+
+.dele {
+    width: 50rpx;
+    height: 50rpx;
+}
+
+.deleimage {
+    width: 50rpx;
+    height: 50rpx;
+    position: relative;
+    top: 25rpx;
+    left: 172rpx
+}
+
+.s {
+    animation: myfirst 0.8s infinite alternate;
+}
+
+@keyframes myfirst {
+    0% {
+        -webkit-transform: scale(1);
+    }
+    10%,
+    20% {
+        -webkit-transform: scale(1) rotate(-3deg);
+    }
+    30%,
+    50%,
+    70%,
+    90% {
+        -webkit-transform: scale(1) rotate(3deg);
+    }
+    40%,
+    60%,
+    80% {
+        -webkit-transform: scale(1) rotate(-3deg);
+    }
+    100% {
+        -webkit-transform: scale(1) rotate(0);
+    }
+}

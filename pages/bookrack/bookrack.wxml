@@ -1,0 +1,39 @@
+<view class="flex m-t-2 a-center">
+    <view class="flex section_gap j-between a-center">
+        <view class="img" bind:tap="closeDel" wx:if="{{msg === 1}}">
+            <image class="image" src="../../assets/img/xuanzhe.png" />
+        </view>
+        <view class="box" bind:tap="openDel" wx:if="{{msg===0}}">
+            <image src="../../assets/img/modify.png" class="image" />
+        </view>
+        <view class="section_name" bind:tap="help">帮助</view>
+    </view>
+    <view>
+        <image class="image" src="../../assets/img/shuaxing.png" />
+    </view>
+</view>
+<view wx:if="{{bookshelf.length === 0}}" class="font t-a">主人你还没有收藏书籍哦！请去书城收藏吧！</view>
+<view wx:else>
+
+   <view wx:if="{{active===0}}" class="flex m-t fonter">
+        <view class="xin-img" wx:for="{{bookshelf}}" wx:key="index" data-id="{{item.id}}" bind:tap="getTo">
+            <view class="dele"></view>
+            <view class="xin-image">
+                <image class="imgsaaa" src="https://statics.zhuishushenqi.com{{item.cover}}" />
+            </view>
+            <view class="xin-text t-a">{{item.title}}</view>
+            <view class="xin-text">读到第1章</view>
+        </view>
+    </view>
+      
+    <view wx:else class="flex m-t fonter">
+        <view class="xin-img shake shake-slow s" wx:for="{{bookshelf}}" wx:key="index" >
+            <view class="dele" data-title="{{item.title}}" catch:tap="delete"><image src="../../assets/img/chacha.png" class="deleimage"></image></view>
+            <view class="xin-image">
+                <image class="imgsaaa" src="https://statics.zhuishushenqi.com{{item.cover}}" />
+            </view>
+            <view class="xin-text t-a">{{item.title}}</view>
+            <view class="xin-text">读到第1章</view>
+        </view>
+    </view>
+</view>

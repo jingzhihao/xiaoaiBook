@@ -1,0 +1,33 @@
+.font {
+    margin-top: 20rpx;
+}
+
+.man {
+    padding: 18rpx;
+    color: rgb(204, 204, 204);
+}
+
+.ranking-comtent {
+    width: 94%;
+    height: 66rpx;
+    margin: 0 auto;
+    display: flex;
+    margin-top: 10rpx;
+    border-bottom: 1rpx solid rgb(247, 247, 247);
+}
+
+.ranking-img {
+    width: 50rpx;
+    height: 50rpx;
+}
+
+.ranging-images {
+    width: 100%;
+    height: 50rpx;
+}
+
+.ranking-text {
+    line-height: 50rpx;
+    font-size: 30rpx;
+    text-indent: 20rpx;
+}
